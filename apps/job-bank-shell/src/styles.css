@@ -1,0 +1,19 @@
+@import '@tn4consulting/shared-ui-scds-core/dist/scds/scds.css';
+
+body {
+  margin: 0;
+  font-family: var(--scds-font-family);
+  color: var(--scds-color-text);
+}
+
+/* Login/auth-callback pages -- previously two identical per-component
+   .css files (login-page.css, auth-callback-page.css); folded into one
+   global stylesheet since esbuild has no Angular-CLI-style per-component
+   styleUrl bundling. */
+.login-page,
+.auth-callback-page {
+  max-width: 40rem;
+  margin: 3rem auto;
+  text-align: center;
+}
+

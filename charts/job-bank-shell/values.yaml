@@ -1,0 +1,38 @@
+frontend:
+  name: job-bank-shell
+  replicaCount: 1
+  image:
+    repository: mfe-pot-job-bank-shell
+    tag: latest
+    pullPolicy: IfNotPresent
+  containerPort: 80
+  servicePort: 80
+  # strapiBaseUrl points at the platform repo's Strapi (charts/strapi,
+  # Ingress host "cms", not "strapi" -- Strapi is an implementation
+  # detail). resolveFederationManifest() tries this first, then falls
+  # back to `remotes` below only if Strapi itself is unreachable/slow;
+  # when Strapi's own charts/strapi/values.yaml REMOTE_*_URL env vars are
+  # kept in sync with the hostnames below, both paths agree.
+  #
+  # `remotes` is the actual federation directory: each URL is the other
+  # app's own public Ingress hostname (client-side federation loading
+  # happens in the end user's browser, fetching remoteEntry.json directly
+  # from that app's origin). Unlike mfe-pot-msca-shell's chart, this host
+  # only ever mounts job-bank's own `./Component` (see routes.tsx), so
+  # there's only one entry here -- if Strapi is reachable its own registry
+  # may return additional remotes (shared across the whole family), but
+  # this app has no route that would ever look them up.
+  runtimeConfig:
+    strapiBaseUrl: "http://cms.mfe-pot.local"
+    # mock-idp's own public Ingress hostname (mfe-pot-platform's
+    # charts/mock-idp) -- browser-to-server, since the citizen's own
+    # browser does a real top-level navigation here for /authorize and a
+    # same-origin-CORS fetch for /token, same reason strapiBaseUrl above
+    # is a public hostname and not in-cluster Service DNS.
+    mockIdpBaseUrl: "http://mock-idp.mfe-pot.local"
+    remotes:
+      job-bank: "http://job-bank.mfe-pot.local/remoteEntry.json"
+
+ingress:
+  host: job-bank-shell.mfe-pot.local
+  className: nginx
