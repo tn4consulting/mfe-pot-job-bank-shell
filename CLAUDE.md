@@ -4,7 +4,7 @@
 
 A **second, minimal host app** for the mfe-pot Government of Canada MFE proof-of-technology, proving the same Native Federation pattern that `mfe-pot-msca-shell` uses generalizes to more than one shell. This host composes exactly **one** federated remote — `mfe-pot-job-bank-mfe`'s own routed `./Component` — under Job-Bank branding: a plain GC-style header/footer, language switcher, the same real authorization-code + PKCE sign-in flow against `mock-idp`, and a runtime federation manifest reader. No sidebar nav (see "What's deliberately different from mfe-pot-msca-shell" below), no BFF of its own.
 
-**This repo doesn't carry its own architecture doc.** Full rationale — bilingual/WCAG/GCDS requirements, the Native Federation setup, why apps are thin and libs hold the logic, the federation-sharing policy, security model, i18n mechanism, hosting/Helm pattern, and every non-obvious gotcha behind the code in this repo — lives in **`../mfe-pot-platform/CLAUDE.md`**. Read it before making any architectural change here; this file only covers what's specific to this repo. See `../CLAUDE.md` (the `mfe-pot` meta repo) for the full repo map.
+**This repo doesn't carry its own architecture doc.** Full rationale — bilingual/WCAG/SCDS requirements, the Native Federation setup, why apps are thin and libs hold the logic, the federation-sharing policy, security model, i18n mechanism, hosting/Helm pattern, and every non-obvious gotcha behind the code in this repo — lives in **`../mfe-pot-platform/CLAUDE.md`**. Read it before making any architectural change here; this file only covers what's specific to this repo. See `../CLAUDE.md` (the `mfe-pot` meta repo) for the full repo map.
 
 ## What's deliberately different from mfe-pot-msca-shell
 
