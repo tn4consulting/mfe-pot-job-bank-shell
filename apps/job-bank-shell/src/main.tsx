@@ -37,7 +37,7 @@ interface ShellRuntimeConfig {
 const devDefaults: ShellRuntimeConfig = {
   strapiBaseUrl: 'http://localhost:1337',
   remotes: {
-    'job-bank': 'http://localhost:4203/remoteEntry.json',
+    'job-bank-mfe': 'http://localhost:4203/remoteEntry.json',
   },
 };
 

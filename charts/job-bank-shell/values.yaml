@@ -31,7 +31,7 @@ frontend:
     # is a public hostname and not in-cluster Service DNS.
     mockIdpBaseUrl: "http://mock-idp.mfe-pot.local"
     remotes:
-      job-bank: "http://job-bank-mfe.mfe-pot.local/remoteEntry.json"
+      job-bank-mfe: "http://job-bank-mfe.mfe-pot.local/remoteEntry.json"
 
 ingress:
   host: job-bank.mfe-pot.local

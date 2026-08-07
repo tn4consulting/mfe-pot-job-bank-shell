@@ -22,7 +22,7 @@ export function AppRoutes() {
         path="/job-bank"
         element={
           <RequireSession>
-            <RemoteRouteHost remoteName="job-bank" />
+            <RemoteRouteHost remoteName="job-bank-mfe" />
           </RequireSession>
         }
       />

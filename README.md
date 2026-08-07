@@ -11,7 +11,7 @@ A **second, minimal host app** for the mfe-pot Government of Canada MFE
 proof-of-technology, proving the same federation pattern
 [`mfe-pot-msca-shell`](../mfe-pot-msca-shell) uses generalizes to more than
 one shell. Composes exactly one federated remote —
-[`mfe-pot-job-bank`](../mfe-pot-job-bank)'s own routed `./Component` — under
+[`mfe-pot-job-bank-mfe`](../mfe-pot-job-bank-mfe)'s own routed `./Component` — under
 Job-Bank branding: header/footer, language switcher, mock sign-in. No
 sidebar nav (there's only one destination), no BFF of its own.
 
@@ -46,7 +46,7 @@ Open `http://localhost:4205` (a different port from `mfe-pot-msca-shell`'s
 has no remote to federate in — its own login page and app frame render, and
 it falls back to static federation-manifest config if Strapi isn't
 reachable (see the platform repo's README for running Strapi and
-`mfe-pot-job-bank` alongside this one for the full experience).
+`mfe-pot-job-bank-mfe` alongside this one for the full experience).
 
 ## Test, lint, build
 
