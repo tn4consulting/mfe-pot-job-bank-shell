@@ -84,10 +84,10 @@ dependency resolves via a `file://../../../mfe-pot-platform/charts/...`
 relative path). Add to `/etc/hosts`:
 
 ```
-127.0.0.1 job-bank-shell.mfe-pot.local
+127.0.0.1 job-bank.mfe-pot.local
 ```
 
-Then `curl -H "Host: job-bank-shell.mfe-pot.local" http://localhost/` or
+Then `curl -H "Host: job-bank.mfe-pot.local" http://localhost/` or
 browse there directly. `mock-idp`'s `ALLOWED_REDIRECT_URI_ORIGINS` must
 include this hostname (already configured in `mfe-pot-platform`'s
 `charts/mock-idp/values.yaml`) for sign-in to work.
