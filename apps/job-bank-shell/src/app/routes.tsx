@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RemoteRouteHost } from '@tn4consulting/shared-federation-runtime';
+import { HomePage } from './HomePage';
 import { LoginPage } from './LoginPage';
 import { AuthCallbackPage } from './AuthCallbackPage';
 import { RequireSession } from './RequireSession';
@@ -13,10 +14,16 @@ import { RequireSession } from './RequireSession';
 // own routed `./Component`. There's no widget-loader wiring here at all --
 // RemoteRouteHost only needs a RemoteModuleLoaderContext.Provider above it
 // (already provided in App.tsx), nothing route-specific.
+//
+// `/` is this host's own bespoke jobbank.gc.ca-style landing page (public,
+// no session needed) -- LoginPage moved to `/sign-in` to make room for it.
+// `/job-bank` is untouched: still the shared job-bank-mfe remote, still
+// session-gated, reached via the homepage's hero/tiles.
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/sign-in" element={<LoginPage />} />
       <Route path="/auth/callback" element={<AuthCallbackPage />} />
       <Route
         path="/job-bank"

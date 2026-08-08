@@ -8,7 +8,7 @@ function renderGuarded() {
   return render(
     <MemoryRouter initialEntries={['/job-bank']}>
       <Routes>
-        <Route path="/" element={<p>Login page</p>} />
+        <Route path="/sign-in" element={<p>Sign-in page</p>} />
         <Route
           path="/job-bank"
           element={
@@ -25,9 +25,9 @@ function renderGuarded() {
 describe('RequireSession', () => {
   afterEach(() => clearSession());
 
-  it('redirects to / when there is no session', () => {
+  it('redirects to /sign-in when there is no session', () => {
     renderGuarded();
-    expect(screen.getByText('Login page')).toBeInTheDocument();
+    expect(screen.getByText('Sign-in page')).toBeInTheDocument();
     expect(screen.queryByText('Protected')).not.toBeInTheDocument();
   });
 

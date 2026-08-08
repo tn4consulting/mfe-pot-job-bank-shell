@@ -13,7 +13,7 @@ function renderCallbackPage(search: string) {
     <MemoryRouter initialEntries={[`/auth/callback${search}`]}>
       <Routes>
         <Route path="/auth/callback" element={<AuthCallbackPage />} />
-        <Route path="/" element={<p>Login page</p>} />
+        <Route path="/sign-in" element={<p>Sign-in page</p>} />
         <Route path="/job-bank" element={<p>Job Bank page</p>} />
       </Routes>
     </MemoryRouter>,
@@ -88,12 +88,12 @@ describe('AuthCallbackPage', () => {
     });
   });
 
-  it('returnToSignIn navigates back to the login route', async () => {
+  it('returnToSignIn navigates back to the sign-in route', async () => {
     renderCallbackPage('');
 
     await screen.findByRole('heading');
     await userEvent.click(screen.getByRole('button', { name: 'authCallback.returnToSignIn' }));
 
-    await waitFor(() => expect(screen.getByText('Login page')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText('Sign-in page')).toBeInTheDocument());
   });
 });

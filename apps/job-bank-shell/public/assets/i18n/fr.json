@@ -2,6 +2,15 @@
   "accountMenu": {
     "signOut": "Se déconnecter ({{name}})"
   },
+  "mainNav": {
+    "label": "Principale",
+    "jobSearch": "Recherche d'emploi",
+    "trainingCareers": "Formation et carrières",
+    "labourMarketInformation": "Information sur le marché du travail",
+    "hiring": "Embauche",
+    "help": "Aide",
+    "about": "À propos"
+  },
   "login": {
     "heading": "Ouvrez une session dans Guichet-Emplois",
     "intro": "Il s'agit d'une connexion simulée à des fins de démonstration seulement -- aucun identifiant réel n'est utilisé.",

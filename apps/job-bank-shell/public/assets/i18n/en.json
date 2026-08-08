@@ -2,6 +2,15 @@
   "accountMenu": {
     "signOut": "Sign out ({{name}})"
   },
+  "mainNav": {
+    "label": "Main",
+    "jobSearch": "Job search",
+    "trainingCareers": "Training and careers",
+    "labourMarketInformation": "Labour market information",
+    "hiring": "Hiring",
+    "help": "Help",
+    "about": "About"
+  },
   "login": {
     "heading": "Sign in to Job Bank",
     "intro": "This is a mock sign-in for demonstration purposes only -- no real credentials are used.",

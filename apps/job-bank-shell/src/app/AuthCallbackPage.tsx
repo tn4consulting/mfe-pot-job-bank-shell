@@ -97,7 +97,7 @@ export function AuthCallbackPage() {
         <>
           <h1>{t('authCallback.errorHeading')}</h1>
           <p>{t('authCallback.errorMessage')}</p>
-          <button type="button" onClick={() => navigate('/')}>
+          <button type="button" onClick={() => navigate('/sign-in')}>
             {t('authCallback.returnToSignIn')}
           </button>
         </>

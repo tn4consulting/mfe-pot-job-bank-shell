@@ -1,0 +1,51 @@
+{
+  "job-bank-shell.home.hero.heading": { "title": "Trouvez votre prochain emploi", "body": "" },
+  "job-bank-shell.home.hero.intro": {
+    "title": "Consultez des milliers d'offres d'emploi partout au Canada et accédez gratuitement à des outils et services du marché du travail.",
+    "body": ""
+  },
+  "job-bank-shell.home.hero.ctaButton": { "title": "Rechercher des emplois", "body": "" },
+  "job-bank-shell.home.hero.searchLabel": { "title": "Titre du poste ou mot-clé", "body": "" },
+  "job-bank-shell.home.hero.searchPlaceholder": { "title": "p. ex. développeur de logiciels", "body": "" },
+  "job-bank-shell.home.featuredTools.heading": { "title": "Outils en vedette", "body": "" },
+  "job-bank-shell.home.featuredTools.findJob.title": { "title": "Trouver un emploi", "body": "" },
+  "job-bank-shell.home.featuredTools.findJob.description": {
+    "title": "Consultez les offres d'emploi et soumettez vos candidatures.",
+    "body": ""
+  },
+  "job-bank-shell.home.featuredTools.fillPosition.title": { "title": "Pourvoir un poste", "body": "" },
+  "job-bank-shell.home.featuredTools.fillPosition.description": {
+    "title": "Affichez un poste et trouvez des candidats qualifiés.",
+    "body": ""
+  },
+  "job-bank-shell.home.featuredTools.findTraining.title": { "title": "Trouver une formation", "body": "" },
+  "job-bank-shell.home.featuredTools.findTraining.description": {
+    "title": "Explorez des programmes pour développer des compétences recherchées.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.heading": { "title": "Sujets tendance", "body": "" },
+  "job-bank-shell.home.trendingTopics.aiTraining.title": { "title": "Découvrir la formation en IA", "body": "" },
+  "job-bank-shell.home.trendingTopics.aiTraining.description": {
+    "title": "Découvrez comment l'intelligence artificielle transforme le monde du travail.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.careerDevelopment.title": { "title": "Développement de carrière", "body": "" },
+  "job-bank-shell.home.trendingTopics.careerDevelopment.description": {
+    "title": "Des outils et ressources pour planifier votre prochaine étape de carrière.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.skilledTrades.title": { "title": "Métiers spécialisés", "body": "" },
+  "job-bank-shell.home.trendingTopics.skilledTrades.description": {
+    "title": "Découvrez les possibilités dans les métiers spécialisés.",
+    "body": ""
+  },
+  "job-bank-shell.home.audienceResources.heading": { "title": "Ressources pour groupes précis", "body": "" },
+  "job-bank-shell.home.audienceResources.youngCanadians.title": { "title": "Jeunes Canadiens", "body": "" },
+  "job-bank-shell.home.audienceResources.indigenousPeoples.title": { "title": "Peuples autochtones", "body": "" },
+  "job-bank-shell.home.audienceResources.newcomers.title": { "title": "Nouveaux arrivants au Canada", "body": "" },
+  "job-bank-shell.home.audienceResources.personsWithDisabilities.title": {
+    "title": "Personnes en situation de handicap",
+    "body": ""
+  },
+  "job-bank-shell.home.audienceResources.veterans.title": { "title": "Vétérans des Forces armées", "body": "" }
+}

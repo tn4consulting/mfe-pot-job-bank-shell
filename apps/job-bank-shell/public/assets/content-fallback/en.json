@@ -1,0 +1,51 @@
+{
+  "job-bank-shell.home.hero.heading": { "title": "Find your next job", "body": "" },
+  "job-bank-shell.home.hero.intro": {
+    "title": "Search thousands of job postings from across Canada, and get free access to job market tools and services.",
+    "body": ""
+  },
+  "job-bank-shell.home.hero.ctaButton": { "title": "Search jobs", "body": "" },
+  "job-bank-shell.home.hero.searchLabel": { "title": "Job title or keyword", "body": "" },
+  "job-bank-shell.home.hero.searchPlaceholder": { "title": "e.g. software developer", "body": "" },
+  "job-bank-shell.home.featuredTools.heading": { "title": "Featured tools", "body": "" },
+  "job-bank-shell.home.featuredTools.findJob.title": { "title": "Find a job", "body": "" },
+  "job-bank-shell.home.featuredTools.findJob.description": {
+    "title": "Search job postings and submit applications.",
+    "body": ""
+  },
+  "job-bank-shell.home.featuredTools.fillPosition.title": { "title": "Fill a position", "body": "" },
+  "job-bank-shell.home.featuredTools.fillPosition.description": {
+    "title": "Post a job and find qualified candidates.",
+    "body": ""
+  },
+  "job-bank-shell.home.featuredTools.findTraining.title": { "title": "Find training", "body": "" },
+  "job-bank-shell.home.featuredTools.findTraining.description": {
+    "title": "Explore programs to build in-demand skills.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.heading": { "title": "Trending topics", "body": "" },
+  "job-bank-shell.home.trendingTopics.aiTraining.title": { "title": "Explore AI training", "body": "" },
+  "job-bank-shell.home.trendingTopics.aiTraining.description": {
+    "title": "Learn how artificial intelligence is changing the way we work.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.careerDevelopment.title": { "title": "Career development", "body": "" },
+  "job-bank-shell.home.trendingTopics.careerDevelopment.description": {
+    "title": "Tools and resources to help plan your next career move.",
+    "body": ""
+  },
+  "job-bank-shell.home.trendingTopics.skilledTrades.title": { "title": "Skilled trades", "body": "" },
+  "job-bank-shell.home.trendingTopics.skilledTrades.description": {
+    "title": "Discover opportunities in the skilled trades.",
+    "body": ""
+  },
+  "job-bank-shell.home.audienceResources.heading": { "title": "Resources for specific groups", "body": "" },
+  "job-bank-shell.home.audienceResources.youngCanadians.title": { "title": "Young Canadians", "body": "" },
+  "job-bank-shell.home.audienceResources.indigenousPeoples.title": { "title": "Indigenous peoples", "body": "" },
+  "job-bank-shell.home.audienceResources.newcomers.title": { "title": "Newcomers to Canada", "body": "" },
+  "job-bank-shell.home.audienceResources.personsWithDisabilities.title": {
+    "title": "Persons with disabilities",
+    "body": ""
+  },
+  "job-bank-shell.home.audienceResources.veterans.title": { "title": "Armed Forces veterans", "body": "" }
+}

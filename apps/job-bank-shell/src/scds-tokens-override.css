@@ -1,0 +1,39 @@
+/*
+ * Job-Bank-blue token override, scoped to THIS app only.
+ *
+ * This does NOT edit @tn4consulting/shared-ui-scds-core's source
+ * (mfe-pot-platform/libs/shared/ui-scds-core) -- it only redefines the
+ * same :root custom properties, later in this app's own bundled CSS.
+ * Custom properties resolve per-document, and every mfe-pot host is a
+ * fully separate page load (separate Ingress hostname, separate `nx
+ * serve` port, never composed side by side in one browser tab), so this
+ * cannot reach mfe-pot-msca-shell's separate document/page -- it never
+ * imports this file. Import order matters: this must load AFTER
+ * `@tn4consulting/shared-ui-scds-core/dist/scds/scds.css` (see
+ * styles.css) so its `:root` rules win at equal specificity.
+ *
+ * The brand-* ramp is what actually drives scds-button/scds-link/
+ * scds-user-menu/scds-card-hover/focus-ring color (confirmed by reading
+ * each component's own shadow CSS) -- redefined here with a distinct blue
+ * from MSCA's default. navy-* only affects scds-footer's background and
+ * the tail of scds-header's brand-mark gradient, darkened toward
+ * jobbank.gc.ca's near-black footer tone. scds-header's own bar is
+ * already white/near-black text by default, so it needs no override.
+ *
+ * This can only recolor the header brand-mark/footer -- both are
+ * hardcoded shapes in the shared component's own shadow CSS, not
+ * something a token override can reshape. Accepted PoC-level limit, not a
+ * gap to fix by editing the shared package.
+ */
+:root {
+  --scds-color-brand-50: #e6f0fa;
+  --scds-color-brand-100: #c2dcf3;
+  --scds-color-brand-300: #6fa8dc;
+  --scds-color-brand-500: #1a5aa8;
+  --scds-color-brand-600: #0b3d78;
+  --scds-color-brand-700: #072c58;
+
+  --scds-color-navy-900: #14181b;
+  --scds-color-navy-800: #1f2427;
+  --scds-color-navy-700: #2a3033;
+}

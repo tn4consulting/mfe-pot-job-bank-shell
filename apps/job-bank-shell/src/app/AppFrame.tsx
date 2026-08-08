@@ -58,6 +58,22 @@ export function AppFrame({ children }: { children: ReactNode }) {
         )}
       </scds-header>
 
+      {/* scds-header has no nav slot (nav lives in scds-sidebar for
+          msca-shell, which this host deliberately doesn't render -- see
+          this file's own top comment). A jobbank.gc.ca-style top nav row
+          is therefore bespoke markup here, not a header prop/slot. Only
+          "Job search" has a real destination in this PoT; the rest are
+          decorative, same honesty-about-scope treatment as the footer
+          links below and HomePage's own static tiles. */}
+      <nav className="home-top-nav" aria-label={t('mainNav.label')}>
+        <a href="/job-bank">{t('mainNav.jobSearch')}</a>
+        <a href="/training-careers">{t('mainNav.trainingCareers')}</a>
+        <a href="/labour-market-information">{t('mainNav.labourMarketInformation')}</a>
+        <a href="/hiring">{t('mainNav.hiring')}</a>
+        <a href="/help">{t('mainNav.help')}</a>
+        <a href="/about">{t('mainNav.about')}</a>
+      </nav>
+
       <main id="main-content">
         <div className="scds-container">{children}</div>
       </main>

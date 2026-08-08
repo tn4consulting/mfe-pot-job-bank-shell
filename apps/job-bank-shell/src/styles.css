@@ -1,4 +1,8 @@
 @import '@tn4consulting/shared-ui-scds-core/dist/scds/scds.css';
+/* Must follow the scds.css import above -- see this file's own header
+   comment for why import order determines which :root wins. */
+@import './scds-tokens-override.css';
+@import './home.css';
 
 body {
   margin: 0;

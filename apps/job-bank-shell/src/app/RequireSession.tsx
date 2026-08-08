@@ -13,5 +13,5 @@ import { getStoredSession } from '@tn4consulting/shared-auth/core';
  * mechanism, see CLAUDE.md.
  */
 export function RequireSession({ children }: { children: ReactNode }) {
-  return getStoredSession() !== null ? <>{children}</> : <Navigate to="/" replace />;
+  return getStoredSession() !== null ? <>{children}</> : <Navigate to="/sign-in" replace />;
 }

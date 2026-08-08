@@ -14,4 +14,10 @@ export const runtimeConfig = getRuntimeConfig({
   // shared-observability's initBrowserObservability, called from
   // bootstrap.tsx.
   otelExporterOtlpEndpoint: undefined as string | undefined,
+  // Same value `main.tsx` already resolves for federation-manifest
+  // lookup (charts/job-bank-shell/values.yaml's strapiBaseUrl), just also
+  // exposed here for HomePage's own CMS-driven content -- see
+  // content-client.ts. undefined default -> createContentClient falls
+  // back to the bundled static content-fallback JSON for plain `nx serve`.
+  strapiBaseUrl: undefined as string | undefined,
 });

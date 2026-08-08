@@ -1,0 +1,88 @@
+/*
+ * Layout for the jobbank.gc.ca-style homepage (HomePage.tsx + app/home/*).
+ * SCDS has no grid/hero container primitive of its own -- scds-card is a
+ * single leaf component -- so this bespoke CSS supplies the tile grids,
+ * hero band, and section spacing around it, entirely in terms of the
+ * shared --scds-* tokens (space/color), never hardcoded values.
+ */
+
+.home-hero {
+  background: var(--scds-color-gray-50);
+  border-bottom: 1px solid var(--scds-border-color);
+  padding-block: var(--scds-space-8);
+}
+
+.home-hero__inner {
+  text-align: center;
+}
+
+.home-hero__inner h1 {
+  font-size: var(--scds-font-size-h1);
+  margin-block-end: var(--scds-space-3);
+}
+
+.home-hero__inner p {
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-block-end: var(--scds-space-6);
+  color: var(--scds-color-text-muted);
+}
+
+.home-hero__search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--scds-space-3);
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.home-hero__search scds-text-input {
+  flex: 1 1 16rem;
+  text-align: start;
+}
+
+.home-section {
+  padding-block: var(--scds-space-8);
+}
+
+.home-section h2 {
+  font-size: var(--scds-font-size-h2);
+  margin-block-end: var(--scds-space-5);
+}
+
+.home-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--scds-space-5);
+}
+
+.home-tile-grid--audience {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+/* Bespoke top nav row -- scds-header has no nav slot of its own (nav lives
+   in scds-sidebar for msca-shell, which this host deliberately doesn't
+   render, see AppFrame.tsx). Rendered as a plain row directly below
+   scds-header. */
+.home-top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--scds-space-5);
+  padding-block: var(--scds-space-3);
+  padding-inline: var(--scds-space-5);
+  background: var(--scds-color-white);
+  border-bottom: 1px solid var(--scds-border-color);
+}
+
+.home-top-nav a {
+  color: var(--scds-color-text);
+  text-decoration: none;
+  font-weight: var(--scds-font-weight-medium);
+}
+
+.home-top-nav a:hover {
+  color: var(--scds-color-brand-600);
+  text-decoration: underline;
+}

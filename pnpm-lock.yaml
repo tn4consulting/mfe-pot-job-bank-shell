@@ -21,6 +21,9 @@ importers:
       '@tn4consulting/shared-auth':
         specifier: ^0.3.0
         version: 0.3.0(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(@angular/router@22.1.0(@angular/common@22.1.0(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(@angular/platform-browser@22.1.0(@angular/common@22.1.0(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2)))(rxjs@7.8.2))
+      '@tn4consulting/shared-content-client':
+        specifier: ^0.3.0
+        version: 0.3.0
       '@tn4consulting/shared-federation-config':
         specifier: ^0.7.0
         version: 0.7.0(@softarc/native-federation@4.3.2(typescript@6.0.3))
@@ -2173,6 +2176,9 @@ packages:
     peerDependencies:
       '@angular/core': '>=22.0.0'
       '@angular/router': '>=22.0.0'
+
+  '@tn4consulting/shared-content-client@0.3.0':
+    resolution: {integrity: sha512-FqetYnnYnC/VSBocxHS2p9q7xLBv8O/P6TqK/3mT39HRwqGzaK2GRVgmAPDIOXYjK1EcHixIzD/FEupQh6ZuiA==, tarball: https://npm.pkg.github.com/download/@tn4consulting/shared-content-client/0.3.0/ce7fab8fb3b3c0337012c93ad09b8dea800ebe42}
 
   '@tn4consulting/shared-federation-config@0.7.0':
     resolution: {integrity: sha512-B9dpO/7aTI1DAG6n6JIT0enRnN2Ed5JW8Uenf0yJ33KsqBk110y00wQ0IwPdHmK4AtNCjXTxkjc5k0DC52odJQ==, tarball: https://npm.pkg.github.com/download/@tn4consulting/shared-federation-config/0.7.0/cc5f427dd6e229755d41b36e81783559e1b988a8}
@@ -8320,6 +8326,8 @@ snapshots:
     dependencies:
       '@angular/core': 22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2)
       '@angular/router': 22.1.0(@angular/common@22.1.0(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(@angular/platform-browser@22.1.0(@angular/common@22.1.0(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.0(@angular/compiler@22.1.0)(rxjs@7.8.2)))(rxjs@7.8.2)
+
+  '@tn4consulting/shared-content-client@0.3.0': {}
 
   '@tn4consulting/shared-federation-config@0.7.0(@softarc/native-federation@4.3.2(typescript@6.0.3))':
     dependencies:
