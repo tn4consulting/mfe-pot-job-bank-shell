@@ -19,8 +19,8 @@ export function TrendingTopics({ heading, topics }: TrendingTopicsProps) {
       <div className="scds-container">
         <h2>{heading}</h2>
         <div className="home-tile-grid">
-          {topics.map((topic) => (
-            <scds-card key={topic.title} card-title={topic.title} description={topic.description} />
+          {topics.map((topic, index) => (
+            <scds-card key={index} card-title={topic.title} description={topic.description} />
           ))}
         </div>
       </div>

@@ -26,8 +26,8 @@ export function FeaturedTools({ heading, tiles }: FeaturedToolsProps) {
       <div className="scds-container">
         <h2>{heading}</h2>
         <div className="home-tile-grid">
-          {tiles.map((tile) => (
-            <scds-card key={tile.title} card-title={tile.title} description={tile.description} href={tile.href} />
+          {tiles.map((tile, index) => (
+            <scds-card key={index} card-title={tile.title} description={tile.description} href={tile.href} />
           ))}
         </div>
       </div>

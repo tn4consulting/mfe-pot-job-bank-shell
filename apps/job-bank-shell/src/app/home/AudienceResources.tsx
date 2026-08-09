@@ -14,8 +14,8 @@ export function AudienceResources({ heading, titles }: AudienceResourcesProps) {
       <div className="scds-container">
         <h2>{heading}</h2>
         <div className="home-tile-grid home-tile-grid--audience">
-          {titles.map((title) => (
-            <scds-card key={title} card-title={title} />
+          {titles.map((title, index) => (
+            <scds-card key={index} card-title={title} />
           ))}
         </div>
       </div>
