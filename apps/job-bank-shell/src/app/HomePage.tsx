@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import type { ContentClient } from '@tn4consulting/shared-content-client';
-import { useLocale } from '@tn4consulting/shared-i18n';
+import { useLocale, useTranslations } from '@tn4consulting/shared-i18n';
 import { runtimeConfig } from '../runtime-config';
 import { assetBaseUrl } from './asset-base-url';
 import { createContentClient, HOME_CONTENT_KEYS } from './content-client';
@@ -21,6 +21,7 @@ import { AudienceResources } from './home/AudienceResources';
  */
 export function HomePage() {
   const locale = useLocale();
+  const { t } = useTranslations(assetBaseUrl, locale);
   const [contentClient, setContentClient] = useState<ContentClient | null>(null);
 
   useEffect(() => {
@@ -29,8 +30,10 @@ export function HomePage() {
 
   const content = usePageContents(contentClient, HOME_CONTENT_KEYS, locale);
 
+  // Never fall through to the raw CMS key -- that's an implementation
+  // detail, not something a citizen should ever see on screen.
   function label(key: (typeof HOME_CONTENT_KEYS)[number]): string {
-    return content[key]?.title ?? key;
+    return content[key]?.title ?? t('errors.contentUnavailable');
   }
 
   return (

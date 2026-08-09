@@ -1,4 +1,23 @@
 {
+  "appFrame": {
+    "appTitle": "Guichet-Emplois"
+  },
+  "footer": {
+    "contactUs": "Contactez-nous",
+    "news": "Nouvelles",
+    "primeMinister": "Premier ministre",
+    "departmentsAgencies": "Ministères et organismes",
+    "treatiesLawsRegulations": "Traités, lois et règlements",
+    "aboutGovernment": "Au sujet du gouvernement",
+    "publicServiceMilitary": "Fonction publique et force militaire",
+    "governmentWideReporting": "Rapports à l'échelle du gouvernement",
+    "openGovernment": "Gouvernement ouvert",
+    "socialMedia": "Médias sociaux",
+    "mobileApplications": "Applications mobiles",
+    "aboutCanada": "À propos de Canada.ca",
+    "termsConditions": "Avis",
+    "sitePrivacy": "Confidentialité du site"
+  },
   "accountMenu": {
     "signOut": "Se déconnecter ({{name}})"
   },
@@ -21,5 +40,8 @@
     "errorHeading": "La connexion n'a pas abouti",
     "errorMessage": "Une erreur est survenue lors de la connexion. Veuillez réessayer.",
     "returnToSignIn": "Retourner à la page de connexion"
+  },
+  "errors": {
+    "contentUnavailable": "Contenu temporairement indisponible"
   }
 }

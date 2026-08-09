@@ -41,7 +41,7 @@ export function AppFrame({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <scds-header app-title="Job Bank" skip-to-href="#main-content">
+      <scds-header app-title={t('appFrame.appTitle')} skip-to-href="#main-content">
         {/* The language toggle stays available whether or not there's a
             session -- unlike sign-out, it's not identity-gated -- so it's a
             plain sibling in the `account` slot rather than nested inside
@@ -85,46 +85,46 @@ export function AppFrame({ children }: { children: ReactNode }) {
           flags as not a navigable address. */}
       <scds-footer>
         <a slot="column-1" href="/contact-us">
-          Contact us
+          {t('footer.contactUs')}
         </a>
         <a slot="column-1" href="/news">
-          News
+          {t('footer.news')}
         </a>
         <a slot="column-1" href="/prime-minister">
-          Prime Minister
+          {t('footer.primeMinister')}
         </a>
         <a slot="column-2" href="/departments-agencies">
-          Departments and agencies
+          {t('footer.departmentsAgencies')}
         </a>
         <a slot="column-2" href="/treaties-laws-regulations">
-          Treaties, laws and regulations
+          {t('footer.treatiesLawsRegulations')}
         </a>
         <a slot="column-2" href="/government">
-          About government
+          {t('footer.aboutGovernment')}
         </a>
         <a slot="column-3" href="/public-service-military">
-          Public service and military
+          {t('footer.publicServiceMilitary')}
         </a>
         <a slot="column-3" href="/government-wide-reporting">
-          Government-wide reporting
+          {t('footer.governmentWideReporting')}
         </a>
         <a slot="column-3" href="/open-government">
-          Open government
+          {t('footer.openGovernment')}
         </a>
         <a slot="bottom" href="/social-media">
-          Social media
+          {t('footer.socialMedia')}
         </a>
         <a slot="bottom" href="/mobile-applications">
-          Mobile applications
+          {t('footer.mobileApplications')}
         </a>
         <a slot="bottom" href="/about">
-          About Canada.ca
+          {t('footer.aboutCanada')}
         </a>
         <a slot="bottom" href="/terms-conditions">
-          Terms and conditions
+          {t('footer.termsConditions')}
         </a>
         <a slot="bottom" href="/site-privacy">
-          Site Privacy
+          {t('footer.sitePrivacy')}
         </a>
       </scds-footer>
     </>

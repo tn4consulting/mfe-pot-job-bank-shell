@@ -1,4 +1,23 @@
 {
+  "appFrame": {
+    "appTitle": "Job Bank"
+  },
+  "footer": {
+    "contactUs": "Contact us",
+    "news": "News",
+    "primeMinister": "Prime Minister",
+    "departmentsAgencies": "Departments and agencies",
+    "treatiesLawsRegulations": "Treaties, laws and regulations",
+    "aboutGovernment": "About government",
+    "publicServiceMilitary": "Public service and military",
+    "governmentWideReporting": "Government-wide reporting",
+    "openGovernment": "Open government",
+    "socialMedia": "Social media",
+    "mobileApplications": "Mobile applications",
+    "aboutCanada": "About Canada.ca",
+    "termsConditions": "Terms and conditions",
+    "sitePrivacy": "Site Privacy"
+  },
   "accountMenu": {
     "signOut": "Sign out ({{name}})"
   },
@@ -21,5 +40,8 @@
     "errorHeading": "Sign-in didn't complete",
     "errorMessage": "Something went wrong completing your sign-in. Please try again.",
     "returnToSignIn": "Return to sign-in"
+  },
+  "errors": {
+    "contentUnavailable": "Content temporarily unavailable"
   }
 }
