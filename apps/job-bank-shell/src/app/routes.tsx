@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RemoteRouteHost } from '@tn4consulting/shared-federation-runtime';
+import { useLocale, useTranslations } from '@tn4consulting/shared-i18n';
+import { assetBaseUrl } from './asset-base-url';
 import { HomePage } from './HomePage';
 import { LoginPage } from './LoginPage';
 import { AuthCallbackPage } from './AuthCallbackPage';
@@ -20,6 +22,9 @@ import { RequireSession } from './RequireSession';
 // `/job-bank` is untouched: still the shared job-bank-mfe remote, still
 // session-gated, reached via the homepage's hero/tiles.
 export function AppRoutes() {
+  const locale = useLocale();
+  const { t } = useTranslations(assetBaseUrl, locale);
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -29,7 +34,7 @@ export function AppRoutes() {
         path="/job-bank"
         element={
           <RequireSession>
-            <RemoteRouteHost remoteName="job-bank-mfe" />
+            <RemoteRouteHost remoteName="job-bank-mfe" loadingLabel={t('appFrame.remoteLoadingLabel')} />
           </RequireSession>
         }
       />

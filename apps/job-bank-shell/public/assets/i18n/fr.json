@@ -1,6 +1,7 @@
 {
   "appFrame": {
-    "appTitle": "Guichet-Emplois"
+    "appTitle": "Guichet-Emplois",
+    "remoteLoadingLabel": "Chargement en cours..."
   },
   "footer": {
     "contactUs": "Contactez-nous",

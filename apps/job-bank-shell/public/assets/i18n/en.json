@@ -1,6 +1,7 @@
 {
   "appFrame": {
-    "appTitle": "Job Bank"
+    "appTitle": "Job Bank",
+    "remoteLoadingLabel": "Loading..."
   },
   "footer": {
     "contactUs": "Contact us",
