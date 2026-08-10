@@ -122,4 +122,33 @@ describe('HomePage', () => {
 
     expect(await screen.findByText('Job Bank page')).toBeInTheDocument();
   });
+
+  // Regression coverage for the bug this hook/page split was built to fix:
+  // content[key]?.title being undefined mid-fetch (the normal, common
+  // case, since the CMS call is always async) must render a loading
+  // spinner, not the "temporarily unavailable" error message -- that
+  // message is reserved for an actual rejected fetch (below).
+  it('shows a loading spinner, not the error message, while content is still loading', () => {
+    // Never resolves -- this test only cares about the render before the
+    // fetch settles.
+    mockGetPageContents.mockReset().mockReturnValue(new Promise<never>(() => undefined));
+
+    const { container } = renderHomePage();
+
+    expect(container.querySelector('scds-spinner')).toBeInTheDocument();
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  it('shows the error message once the content fetch actually rejects', async () => {
+    mockGetPageContents.mockReset().mockRejectedValue(new Error('CMS unreachable'));
+
+    const { container } = renderHomePage();
+
+    // No spec-local fetch mock is set up for useTranslations' own
+    // assets/i18n/<locale>.json call, so it falls back to the raw
+    // translation key -- same convention every other spec in this file
+    // relies on the default test-setup.ts fetch stub for.
+    expect(await screen.findByRole('alert')).toHaveTextContent('errors.contentUnavailable');
+    expect(container.querySelector('scds-spinner')).not.toBeInTheDocument();
+  });
 });

@@ -28,12 +28,33 @@ export function HomePage() {
     setContentClient(createContentClient(runtimeConfig.strapiBaseUrl, assetBaseUrl));
   }, []);
 
-  const content = usePageContents(contentClient, HOME_CONTENT_KEYS, locale);
+  const { content, loading, error } = usePageContents(contentClient, HOME_CONTENT_KEYS, locale);
 
-  // Never fall through to the raw CMS key -- that's an implementation
-  // detail, not something a citizen should ever see on screen.
   function label(key: (typeof HOME_CONTENT_KEYS)[number]): string {
-    return content[key]?.title ?? t('errors.contentUnavailable');
+    return content[key]?.title ?? key;
+  }
+
+  // `content` is also `{}` mid-fetch, before usePageContents' own promise
+  // has settled either way -- rendering `label()`'s fallback during that
+  // normal loading window would show "content temporarily unavailable" on
+  // every single page load, not just a genuine CMS failure. Show a spinner
+  // for that window instead, and reserve the error message for `error`
+  // (the fetch actually rejected -- rare, since ContentClient itself
+  // degrades to bilingual fallback content before ever throwing).
+  if (loading) {
+    return (
+      <div className="home-page">
+        <scds-spinner label={t('appFrame.remoteLoadingLabel')} />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="home-page">
+        <p role="alert">{t('errors.contentUnavailable')}</p>
+      </div>
+    );
   }
 
   return (

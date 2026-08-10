@@ -16,6 +16,7 @@ declare global {
       'scds-header': ScdsElementProps & { 'app-title'?: string; 'skip-to-href'?: string };
       'scds-user-menu': ScdsElementProps & { name?: string };
       'scds-footer': ScdsElementProps;
+      'scds-spinner': ScdsElementProps & { label?: string; size?: 'small' | 'regular' };
     }
   }
 }

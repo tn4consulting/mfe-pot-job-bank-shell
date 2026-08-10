@@ -7,8 +7,9 @@
 // family entirely; shell depends directly on
 // @tn4consulting/shared-ui-scds-core for scds-header/scds-footer/
 // scds-user-menu (app-frame chrome) and, since HomePage.tsx, also
-// scds-card/scds-button/scds-text-input (the jobbank.gc.ca-style
-// homepage). One defineCustomElements() call registers the whole library.
+// scds-card/scds-button/scds-text-input/scds-spinner (the jobbank.gc.ca-
+// style homepage). One defineCustomElements() call registers the whole
+// library.
 import { defineCustomElements } from '@tn4consulting/shared-ui-scds-core/loader';
 
 defineCustomElements();
